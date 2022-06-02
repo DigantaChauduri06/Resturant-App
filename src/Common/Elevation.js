@@ -6,5 +6,5 @@ export const Elevation = {
         height: 3,
     },
     elevation: 14,
-    shadowOpacity: .6,
+    shadowOpacity: .4,
 };

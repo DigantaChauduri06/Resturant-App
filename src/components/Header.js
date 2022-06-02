@@ -1,27 +1,37 @@
 import { Text, StyleSheet, View } from 'react-native'
-import React, { Component } from 'react'
+import React from 'react'
+//fonts
+import {
+    Adamina_400Regular,
+    useFonts
+} from '@expo-google-fonts/adamina'
 
-export default class Header extends Component {
-    render() {
-        return (
-            <View>
-                <Text style={styles.header_main}>Grab Your</Text>
-                <Text style={styles.header_sub}>Delicious Meal!</Text>
-            </View>
-        )
-    }
+const Header = () => {
+    const [fontsLoaded] = useFonts({
+        Adamina_400Regular,
+    })
+    //!Warn -- Depricated use expo-splash-screen
+    if (!fontsLoaded) return <Text>Font Loading Failed</Text>
+    return (
+        <View>
+            <Text style={[styles.header_main, { fontFamily: 'Adamina_400Regular' }]}>Grab Your</Text>
+            <Text style={[styles.header_sub, { fontFamily: 'Adamina_400Regular' }]}>Delicious Meal!</Text>
+        </View>
+    )
 }
-
+export default Header;
 const styles = StyleSheet.create({
     header_main: {
-        fontSize: 26,
+        fontSize: 21,
         fontWeight: "300",
-        marginTop: 75,
+        marginTop: 58,
         marginHorizontal: 35,
+
     },
     header_sub: {
-        fontSize: 45,
+        fontSize: 40,
         fontWeight: "700",
         marginHorizontal: 16,
+
     },
 });

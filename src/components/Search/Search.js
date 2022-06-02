@@ -3,7 +3,8 @@ import { StyleSheet, View, TextInput } from 'react-native'
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Elevation } from '../../Common/Elevation';
 import Catagory from './Catagory';
-const Search = ({ catagory }) => {
+import DropdownComponent from '../FetchResturents/DropDown';
+const Search = ({ catagory, navigation }) => {
     const [term, setTerm] = useState("");
     const [isActive, setIsActive] = useState("Burger");
     // Handler Function
@@ -16,7 +17,7 @@ const Search = ({ catagory }) => {
     return (
         <>
             <View style={[styles.container, styles.Elevation]}>
-                <FontAwesome5 name="search" size={25} color="black" />
+                <FontAwesome5 name="search" size={23} color="black" />
                 <TextInput placeholder='Resturent, food' style={styles.input}
                     onChangeText={(e) => {
                         setTerm(e);
@@ -26,6 +27,7 @@ const Search = ({ catagory }) => {
                 />
             </View>
             <Catagory catagory={catagory} isActive={isActive} setIsActive={setIsActive} />
+            <DropdownComponent food={isActive} navigation={navigation} />
         </>
     )
 }
@@ -34,16 +36,16 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#fff',
         flexDirection: 'row',
-        marginTop: 15,
+        marginTop: 11,
         marginHorizontal: 20,
-        padding: 10,
-        borderRadius: 30,
+        padding: 9,
+        borderRadius: 33,
         alignItems: 'center',
         justifyContent: 'center'
     },
     Elevation,
     input: {
-        fontSize: 20,
+        fontSize: 19,
         paddingLeft: 6,
         marginLeft: 5,
         width: "90%"
