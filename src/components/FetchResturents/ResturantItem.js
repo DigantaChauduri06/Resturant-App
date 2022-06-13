@@ -3,7 +3,7 @@ import { Elevation } from '../../Common/Elevation';
 
 const ResturantItem = ({ resturant, navigation }) => {
     return (
-        <TouchableOpacity onPress={() => navigation.navigate("resturants", { id: resturant.id })}>
+        <TouchableOpacity onPress={() => navigation.navigate("resturants", { id: resturant.id, resturant })}>
             <View style={[styles.container, styles.Elevation]}>
                 <Image source={{ uri: resturant.image_url }} style={styles.image} />
                 <View style={styles.info}>
