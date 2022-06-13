@@ -1,0 +1,10 @@
+Array [
+  Object {
+    "displayName": "Diganta Chaudhuri",
+    "email": null,
+    "phoneNumber": null,
+    "photoURL": "https://graph.facebook.com/1204976280271035/picture",
+    "providerId": "facebook.com",
+    "uid": "1204976280271035",
+  },
+]
