@@ -1,4 +1,4 @@
-import { StyleSheet, SafeAreaView } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import Header from '../components/Header';
 import Search from '../components/Search/Search';
 const HomeScreen = ({ navigation }) => {
@@ -11,10 +11,10 @@ const HomeScreen = ({ navigation }) => {
         { name: "Spaguetti", uri: require("../Assets/Images/spaguetti.png"), id: 5 },
     ];
     return (
-        <SafeAreaView>
+        < View>
             <Header />
             <Search catagory={CommonCatagory} navigation={navigation} />
-        </SafeAreaView>
+        </View>
     )
 }
 export default HomeScreen

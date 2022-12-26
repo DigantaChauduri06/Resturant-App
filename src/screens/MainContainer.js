@@ -8,7 +8,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // screen
 import HomeScreen from './HomeScreen';
-import Profile from './Profile';
+import Profile from './Profile2';
 import Resturants from './Resturants';
 
 //screen names
